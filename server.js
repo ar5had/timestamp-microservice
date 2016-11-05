@@ -12,6 +12,6 @@ app.get('/:date', function(req, res){
   res.send('<style>body{background: #fefefe;} p{font-weight: 700; text-align: center; font-family: monospace; word-wrap: break-word; color: #625e98; font-size: 25px; margin-top: 40vh;}</style><p>' + JSON.stringify(json) + '</p>');
 });
 
-app.listen(8080, function () {
-  console.log('App listening on port 8080!');
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
 });
